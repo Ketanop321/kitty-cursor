@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Follower</title>
+    <link rel="stylesheet">
+</head>
+<body>
+    <div class="cat" id="cat"></div>
+    <style>body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .cat {
+        position: absolute;
+        width: 40px; /* Adjust size as needed */
+        height: 40px; /* Adjust size as needed */
+        background-image: url('cat\ 2.cur'); /* or use 'https://via.placeholder.com/50' for the online placeholder */
+        background-size: cover;
+        pointer-events: none; /* Prevents the cat from blocking other elements */
+    }
+    </style>
+    
+
+    <script>// script.js
+        document.addEventListener('mousemove', function(e) {
+            const cat = document.getElementById('cat');
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            const offset = 22; // Adjust this value based on cat image size 
+            // Set the position of the cat element
+            cat.style.left = (mouseX - offset) + 'px';
+            cat.style.top = (mouseY - offset) + 'px';
+        });
+
+        </script>
+    </body>
+</html>
